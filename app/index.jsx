@@ -1,28 +1,50 @@
-import React from 'react'
-import {StyleSheet, View, Image} from 'react-native'
+import React, {useState} from 'react'
+import {StyleSheet, View, TextInput} from 'react-native'
 
 const App = () => {
+    const [name, setName] = useState()
+    const [age, setAge] = useState()
+    const [question, setQuestion] = useState()
+
     return (
-        <View style={styles.container}>
-            <Image 
-                style={styles.image} 
-                source={require('../assets/images/icon.png')} 
+        <View>
+            <TextInput
+                style={styles.input}
+                placeholder='Masukkan Nama'
+                onChangeText={setName}
+                value={name}
             />
-            <Image
-                style={styles.image}
-                source={{uri:'https://progate.com/images/ogp/about.png',}}
+            <TextInput
+                style={styles.input}
+                placeholder='Masukkan Umur'
+                onChangeText={setAge}
+                value={age}
+                keyboardType='numeric'
+            />
+            <TextInput
+                style={styles.multiLineInput}
+                placeholder='Masukkan pertanyaan'
+                multiline={true}
+                numberOfLines={3}
+                onChangeText={setQuestion}
+                value={question}
             />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 50,
+    input: {
+        height: 60,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
     },
-    image: {
-        width: 200,
-        height: 200,
+    multiLineInput: {
+        height: 100,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
     },
 })
 
