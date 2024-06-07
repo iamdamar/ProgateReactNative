@@ -1,39 +1,28 @@
 import React from 'react'
-import {StyleSheet, View, Text} from 'react-native'
+import {StyleSheet, View, Image} from 'react-native'
 
 const App = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>
-                React Native - Progate
-            </Text>
-            <Text style={styles.title}>
-                React Native - Progate
-            </Text>
-            <Text style={styles.title}>
-                React Native - Progate
-            </Text>
+            <Image 
+                style={styles.image} 
+                source={require('../assets/images/icon.png')} 
+            />
+            <Image
+                style={styles.image}
+                source={{uri:'https://progate.com/images/ogp/about.png',}}
+            />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        padding: 24,
-        backgroundColor: '#eaeaea',
+        paddingTop: 50,
     },
-    title: {
-        marginTop: 16,
-        paddingVertical: 8,
-        borderWidth: 4,
-        borderColor: '#20232a',
-        borderRadius: 6,
-        backgroundColor: '#61dafb',
-        color: '#20232a',
-        textAlign: 'center',
-        fontSize: 30,
-        fontWeight: 'bold',
+    image: {
+        width: 200,
+        height: 200,
     },
 })
 
