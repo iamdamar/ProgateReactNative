@@ -1,83 +1,37 @@
 import React from 'react'
-import {StyleSheet, View, FlatList, Text} from 'react-native'
-
-const items = [
-    {
-        id: '1',
-        title: 'Item Pertama',
-    },
-    {
-        id: '2',
-        title: 'Item Kedua',
-    },
-    {
-        id: '3',
-        title: 'Item Ketiga',
-    },
-    {
-        id: '4',
-        title: 'Item Keempat',
-    },
-    {
-        id: '5',
-        title: 'Item Kelima',
-    },
-    {
-        id: '6',
-        title: 'Item Keenam',
-    },
-    {
-        id: '7',
-        title: 'Item Ketujuh',
-    },
-    {
-        id: '8',
-        title: 'Item Kedelapan',
-    },
-    {
-        id: '9',
-        title: 'Item Kesembilan',
-    },
-    {
-        id: '10',
-        title: 'Item Kesepuluh',
-    },
-]
-
-const Item = ({title}) => (
-    <View style={styles.item}>
-        <Text style={styles.title}>
-            {title}
-        </Text>
-    </View>
-)
+import {StyleSheet, View, Button, Alert} from 'react-native'
 
 const App = () => {
-    const renderItem = ({item}) => <Item title={item.title} />
  
     return (
-        <View style={styles.container}>
-            <FlatList
-                data={items}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id}
-            />
+        <View>
+            <View style={styles.buttonWrapper}>
+            <Button
+                title='Default Button'
+                onPress={() => Alert.alert('Simple Button')}
+                />
+            </View>
+            <View style={styles.buttonWrapper}>
+            <Button
+                title='Color Button'
+                color='#f194ff'
+                onPress={() => Alert.alert('Color Button')}
+                />
+            </View>
+            <View style={styles.buttonWrapper}>
+            <Button
+                title='Disabled Button'
+                disabled
+                onPress={() => Alert.alert('Disable Button')}
+                />
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    item: {
-        backgroundColor: '#f9c2ff',
-        marginHorizontal: 16,
-        marginVertical: 8,
-        padding: 20,
-    },
-    title: {
-        fontSize: 32,
+    buttonWrapper: {
+        margin: 10,
     },
 })
 
