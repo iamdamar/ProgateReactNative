@@ -1,22 +1,40 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {StyleSheet, View, Text} from 'react-native'
 
 const App = () => {
     return (
-        <Text style={{fontSize: 30}}>
-            <Text style={{fontWeight: 'bold'}}>
-                Belajar Progate
+        <View style={styles.container}>
+            <Text style={styles.title}>
+                React Native - Progate
             </Text>
-            <Text>
-                Saat ini aku sedang belajar mengenai text komponen
+            <Text style={styles.title}>
+                React Native - Progate
             </Text>
-            <View>
-                <Text>
-                    Ayo belajar dengan guru Domba
-                </Text>
-            </View>
-        </Text>
+            <Text style={styles.title}>
+                React Native - Progate
+            </Text>
+        </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 24,
+        backgroundColor: '#eaeaea',
+    },
+    title: {
+        marginTop: 16,
+        paddingVertical: 8,
+        borderWidth: 4,
+        borderColor: '#20232a',
+        borderRadius: 6,
+        backgroundColor: '#61dafb',
+        color: '#20232a',
+        textAlign: 'center',
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
+})
 
 export default App
