@@ -1,38 +1,41 @@
 import React from 'react'
-import {StyleSheet, View, Button, Alert} from 'react-native'
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native'
 
 const App = () => {
+    const [count, setCount] = React.useState(0);
+    const onPress = () => setCount(count +1);
  
     return (
-        <View>
-            <View style={styles.buttonWrapper}>
-            <Button
-                title='Default Button'
-                onPress={() => Alert.alert('Simple Button')}
-                />
-            </View>
-            <View style={styles.buttonWrapper}>
-            <Button
-                title='Color Button'
-                color='#f194ff'
-                onPress={() => Alert.alert('Color Button')}
-                />
-            </View>
-            <View style={styles.buttonWrapper}>
-            <Button
-                title='Disabled Button'
-                disabled
-                onPress={() => Alert.alert('Disable Button')}
-                />
-            </View>
+        <View style={styles.container}>
+           <Text>
+            You clicked {count} times
+           </Text>
+           <TouchableOpacity 
+            style={styles.button}
+            onPress={onPress}
+            >
+                <Text style={styles.buttonText}>
+                Press Here
+                </Text>
+            </TouchableOpacity>
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
-    buttonWrapper: {
-        margin: 10,
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-})
+    button: {
+        backgroundColor: '#674f74',
+        padding: 10,
+        marginVertical: 10,
+    },
+    buttonText: {
+        color: '#FFF',
+    },
+});
 
-export default App
+export default App;
