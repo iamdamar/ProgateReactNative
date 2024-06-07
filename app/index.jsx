@@ -1,50 +1,29 @@
-import React, {useState} from 'react'
-import {StyleSheet, View, TextInput} from 'react-native'
+import React from 'react'
+import {StyleSheet, View, ScrollView, Text} from 'react-native'
 
 const App = () => {
-    const [name, setName] = useState()
-    const [age, setAge] = useState()
-    const [question, setQuestion] = useState()
-
+ 
     return (
-        <View>
-            <TextInput
-                style={styles.input}
-                placeholder='Masukkan Nama'
-                onChangeText={setName}
-                value={name}
-            />
-            <TextInput
-                style={styles.input}
-                placeholder='Masukkan Umur'
-                onChangeText={setAge}
-                value={age}
-                keyboardType='numeric'
-            />
-            <TextInput
-                style={styles.multiLineInput}
-                placeholder='Masukkan pertanyaan'
-                multiline={true}
-                numberOfLines={3}
-                onChangeText={setQuestion}
-                value={question}
-            />
+        <View style={styles.container}>
+            <ScrollView style={styles.scrollView}>
+                <Text style={styles.text}>
+                    ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj ljsdkjsdklsd ojifesojisfjs ofjsfjfsj
+                </Text>
+            </ScrollView>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    input: {
-        height: 60,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
+    container: {
+        flex: 1,
     },
-    multiLineInput: {
-        height: 100,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
+    scrollView: {
+        backgroundColor: 'gray',
+        marginHorizontal: 20,
+    },
+    text: {
+        fontSize: 42,
     },
 })
 
