@@ -3,18 +3,19 @@ import {View, Text} from 'react-native'
 
 const App = () => {
     return (
-        <View>
-            <View style={{alignItems: 'center'}}>
-                <Text style={{fontSize: 40}}>
-                    Hello React Native
+        <Text style={{fontSize: 30}}>
+            <Text style={{fontWeight: 'bold'}}>
+                Belajar Progate
+            </Text>
+            <Text>
+                Saat ini aku sedang belajar mengenai text komponen
+            </Text>
+            <View>
+                <Text>
+                    Ayo belajar dengan guru Domba
                 </Text>
             </View>
-            <View style={{flexDirection: 'row', height: 100}}>
-                <View style={{backgroundColor: 'blue', flex: 1}} />
-                <View style={{backgroundColor: 'red', flex: 1}} />
-                <View style={{backgroundColor: 'green', flex: 1}} />
-            </View>
-        </View>
+        </Text>
     )
 }
 
